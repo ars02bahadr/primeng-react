@@ -1,36 +1,36 @@
-# PrimeReact Next.js Projesi 
+# 🚀 PrimeReact Next.js Projesi 
 
 Modern ve kullanıcı dostu bir web uygulaması geliştirmek için Next.js 14, PrimeReact ve Redux tabanlı başlangıç şablonu.
 
-## Özellikler
+## ✨ Özellikler
 
-- Next.js 14 App Router
-- PrimeReact UI Bileşenleri
-- Redux Toolkit State Yönetimi
-- JWT Tabanlı Kimlik Doğrulama
-- Axios HTTP İstemcisi
-- Modern ve Responsive Tasarım
-- Server Side Rendering (SSR)
+- ⚡ Next.js 14 App Router
+- 🎨 PrimeReact UI Bileşenleri
+- 📦 Redux Toolkit State Yönetimi
+- 🔐 JWT Tabanlı Kimlik Doğrulama
+- 🌐 Axios HTTP İstemcisi
+- 📱 Modern ve Responsive Tasarım
+- 🖥️ Server Side Rendering (SSR)
 
-## Redux ve State Yönetimi
+## 📊 Redux ve State Yönetimi
 
-### Redux Nedir ve Neden Kullanılır?
+### 🤔 Redux Nedir ve Neden Kullanılır?
 Redux, React uygulamaları için merkezi bir state (durum) yönetim kütüphanesidir. Özellikle:
 
-1. **Merkezi State Yönetimi**: 
-   - Tüm uygulama verilerini tek bir yerde toplar
-   - Komponentler arası veri paylaşımını kolaylaştırır
-   - State değişikliklerini tahmin edilebilir hale getirir
+1. **🎯 Merkezi State Yönetimi**: 
+   - 📍 Tüm uygulama verilerini tek bir yerde toplar
+   - 🔄 Komponentler arası veri paylaşımını kolaylaştırır
+   - 📈 State değişikliklerini tahmin edilebilir hale getirir
 
-2. **Performans Optimizasyonu**:
-   - Gereksiz render'ları önler
-   - Büyük uygulamalarda state yönetimini optimize eder
+2. **⚡ Performans Optimizasyonu**:
+   - 🚫 Gereksiz render'ları önler
+   - 📈 Büyük uygulamalarda state yönetimini optimize eder
 
-3. **Debugging Kolaylığı**:
-   - Redux DevTools ile state değişikliklerini izleme
-   - Hata ayıklama ve geliştirme sürecini hızlandırma
+3. **🔍 Debugging Kolaylığı**:
+   - 🔍 Redux DevTools ile state değişikliklerini izleme
+   - 🚀 Hata ayıklama ve geliştirme sürecini hızlandırma
 
-### Redux Toolkit ve Temel Bileşenler
+### 📁 Redux Toolkit ve Temel Bileşenler
 
 ```typescript
 // store/slices/authSlice.ts
@@ -65,7 +65,7 @@ const authSlice = createSlice({
 });
 ```
 
-### Komponentlerde Kullanım
+### 📝 Komponentlerde Kullanım
 
 ```typescript
 // Örnek Login Komponenti
@@ -85,7 +85,7 @@ const LoginPage = () => {
 };
 ```
 
-### HTTP Service ve Redux Entegrasyonu
+### 🌐 HTTP Service ve Redux Entegrasyonu
 
 ```typescript
 // shared/HttpService.tsx
@@ -121,7 +121,7 @@ class HttpService {
 }
 ```
 
-## Proje Yapısı
+## 🗂️ Proje Yapısı
 
 ```
 app/
@@ -141,9 +141,9 @@ app/
     └── AppMenu.tsx
 ```
 
-## State Yönetimi Örnekleri
+## 📊 State Yönetimi Örnekleri
 
-### Kimlik Doğrulama
+### 🔒 Kimlik Doğrulama
 ```typescript
 // Kullanıcı Girişi
 const handleLogin = async () => {
@@ -167,7 +167,7 @@ const ProtectedRoute = () => {
 };
 ```
 
-### Veri Yönetimi
+### 📈 Veri Yönetimi
 ```typescript
 // API'den Veri Çekme
 const fetchData = createAsyncThunk(
@@ -193,7 +193,7 @@ const DataComponent = () => {
 };
 ```
 
-## Geliştirme Komutları
+## 🚀 Geliştirme Komutları
 
 ```bash
 # Geliştirme sunucusu
@@ -206,7 +206,7 @@ npm run build
 npm run lint
 ```
 
-## Kullanılan Teknolojiler
+## 📚 Kullanılan Teknolojiler
 
 - Next.js 14
 - PrimeReact
