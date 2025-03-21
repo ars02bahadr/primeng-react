@@ -16,7 +16,7 @@ import {
 } from "primereact/autocomplete";
 import { Carousel } from 'primereact/carousel';
 import { Image } from 'primereact/image';
-import { ProductService } from '../../demo/service/ProductService';
+import { ProductService } from '../../../../demo/service/ProductService';
 import type { Demo } from '@/types';
 import { Column, ColumnFilterApplyTemplateOptions, ColumnFilterClearTemplateOptions, ColumnFilterElementTemplateOptions } from 'primereact/column';
 import { DataTable, DataTableExpandedRows, DataTableFilterMeta } from 'primereact/datatable';
@@ -25,7 +25,7 @@ import { Slider } from 'primereact/slider';
 import { TriStateCheckbox } from 'primereact/tristatecheckbox';
 import { classNames } from 'primereact/utils';
 import { FilterMatchMode, FilterOperator } from 'primereact/api';
-import { CustomerService } from '../../demo/service/CustomerService';
+import { CustomerService } from '../../../../demo/service/CustomerService';
 import { Dialog } from 'primereact/dialog';
 import { FileUpload } from 'primereact/fileupload';
 import { Toast } from 'primereact/toast';

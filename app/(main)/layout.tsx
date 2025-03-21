@@ -1,28 +1,48 @@
-import { Metadata } from 'next';
-import Layout from '../../layout/layout';
+'use client';
 
-interface AppLayoutProps {
+import React, { useEffect } from 'react';
+import { useRouter, usePathname } from 'next/navigation';
+import Layout from '../../layout/layout';
+import { useSelector } from 'react-redux';
+import { RootState } from '../store/store';
+
+interface MainLayoutProps {
     children: React.ReactNode;
 }
 
-export const metadata: Metadata = {
-    title: 'PrimeReact Sakai',
-    description: 'The ultimate collection of design-agnostic, flexible and accessible React UI Components.',
-    robots: { index: false, follow: false },
-    viewport: { initialScale: 1, width: 'device-width' },
-    openGraph: {
-        type: 'website',
-        title: 'PrimeReact SAKAI-REACT',
-        url: 'https://sakai.primereact.org/',
-        description: 'The ultimate collection of design-agnostic, flexible and accessible React UI Components.',
-        images: ['https://www.primefaces.org/static/social/sakai-react.png'],
-        ttl: 604800
-    },
-    icons: {
-        icon: '/favicon.ico'
-    }
-};
+const PUBLIC_PATHS = ['/login'];
 
-export default function AppLayout({ children }: AppLayoutProps) {
+export default function MainLayout({ children }: MainLayoutProps) {
+    const router = useRouter();
+    const pathname = usePathname();
+    const { user, isAuthenticated } = useSelector((state: RootState) => state.auth);
+    const isPublicPath = PUBLIC_PATHS.includes(pathname);
+
+    useEffect(() => {
+        let mounted = true;
+
+        const handleAuth = () => {
+            if (!mounted) return;
+
+            if (!isAuthenticated && !user && !isPublicPath) {
+                router.push('/login');
+            } 
+        };
+
+        handleAuth();
+
+        return () => {
+            mounted = false;
+        };
+    }, [isAuthenticated, user, isPublicPath, router, pathname]);
+
+    if (isPublicPath) {
+        return <>{children}</>;
+    }
+
+    if (!isAuthenticated || !user) {
+        return null;
+    }
+
     return <Layout>{children}</Layout>;
 }

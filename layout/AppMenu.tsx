@@ -19,7 +19,7 @@ const AppMenu = () => {
                 {
                     label: 'Empty',
                     icon: 'pi pi-fw pi-circle-off',
-                    to: '/pages'
+                    to: '/pages/empty'
                 }
             ]
         }
